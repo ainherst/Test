@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Contact Us</title>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/><link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script language="javascript"> 
+  function DoSubmit () 
+  { 
+/* 
+    This javascript will check if the important fields have been filled in. 
+    The control is pretty basic (if the user types " " it will see it as full, 
+    but it is enough to alert a person who forgot to fill out a form, without 
+    him / her having to wait until the form refreshes (good for slow modems). 
+
+    The return ""; command will exit the function, so that the form is only 
+    submitted when it is valid. 
+*/ 
+
+    if (document.form.mail_from.value == "") { 
+      alert ("You forgot to enter the 'Email' field."); 
+      document.form.mail_from.focus (); 
+      return ""; 
+    } 
+
+    if (document.form.mail_add.value == "") { 
+      alert ("You forgot to enter the 'Name' field."); 
+      document.form.mail_add.focus (); 
+      return ""; 
+    } 
+
+    if (document.form.mail_body.value == "") { 
+      alert ("You forgot to enter the 'Comments' field."); 
+      document.form.mail_body.focus (); 
+      return ""; 
+    } 
+
+    document.form.submit (); 
+  } 
+</script>
+</head>
+<body>
+<div id="container">
+  <div id="masthead"></div>
+  <div id="content">
+    <div id="title">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="shell">
+      <p>Hi, I'm <b>Ruth Cracknell</b>, founder of <b>bowllingtips.org</b>. If you have a question, comment or suggestion 
+        then you've come to the right place!</p>
+      <p> My #1 priority is get you the answer you need, ASAP. So, to get all your 
+        questions answered as quickly as possible please use this simple form below to 
+        send me an email. </p>
+      <div id="comment_form">
+        <form action='contactus.php' method='post' name='form' id='form'>
+          <table cellspacing='1' cellpadding='1' border='0' id='table3' style='font-family: verdana; font-size: 12px;'>
+            <tr>
+              <td>&nbsp;Name</td>
+              <td>:</td>
+              <td><input type='text' name='mail_add' value='' size='40' /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;E-Mail</td>
+              <td>:</td>
+              <td><input type='text' name='mail_from' value='' size='40' /></td>
+            </tr>
+            <tr>
+              <td valign='top'>&nbsp;Comments</td>
+              <td valign='top'>:</td>
+              <td><textarea name='mail_body' cols='40' rows='10'></textarea></td>
+            </tr>
+            <tr>
+              <td colspan='3'>                Please enter the &quot;verification word&quot; that you see below:</td>
+            </tr>
+            <tr>
+              <td colspan='2'></td>
+            </tr>
+            <tr>
+              <td colspan='2'><img src='images/captcha.jpg' /></td>
+              <td><input type='text' name='captcha' size='40' /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type='hidden' name='mode' value='submit' /></td>
+              <td align='middle' colspan='3'><input name='button' type='button' onclick='DoSubmit ()' value='Submit' /></td>
+            </tr>
+            <tr>
+              <td colspan='3' height='5'></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+           </div>
+  </div>
+  <div id="footer">
+  ?
+  <div id="footer_nav">
+    <p><a href="/"  rel="nofollow">Home</a> | <a href="contactus.php" rel="nofollow">Contact</a> | Buy Now | <a href="privacy.php"  rel="nofollow">Privacy</a> | <a href="home.php"  rel="nofollow">Bowlling Tips Articles</a></p>
+  </div>
+  <div id="copyright">Copyright © 2009 bowllingtips.org inc. All rights reserved.</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7965616-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Start long tail magic code -->
+<SCRIPT type='text/JavaScript' SRC='http://trackinglinks.net/gurumaster/monitor4/analytics/aratc.js'></SCRIPT>
+<SCRIPT type='text/JavaScript'>AR_Analytics("trackinglinks.net/gurumaster/monitor4/", 23);</SCRIPT>
+<NOSCRIPT><img src="http://trackinglinks.net/gurumaster/monitor4/analytics/pixel.gif?CCID=23" width=1 height=1></NOSCRIPT>
+<!-- End long tail magic code -->
+
+
+  </div>
+</div>
+</body>
+</html>
